@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<!-- l'attribut lang : devrait refléter la langue dans laquelle sont principalement rédigés les contenus de la page -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Re)découverte de HTML et CSS- Accueil</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 3 balises "link" fournies par Google Fonts pour nous permettre d'utiliser des polices non "web-safe" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header><!-- header est une balise sémantique (destinée à donner du sens à cette partie de la structure HTML). Son comportement visuel par défaut sera identique à un élément div (donc un simple bloc) ; la différence est qu'ici on indique clairement que c'est une en-tête, en l'occurrence celle de la page en elle-même puisqu'on est directement dans l'élément body. -->
+
+        <h1>(Re)découverte :<br>HTML et CSS</h1>
+        <!-- Balise h1 : titre de premier niveau (le plus haut). La règle est que sur une page, on ne met en place qu'un seul titre h1. Pour les niveaux de titres suivants, on est libres (mais en faisant attention à rester cohérents dans les niveaux). -->
+
+        <nav><!-- balise sémantique - navigation -->
+
+            <ul><!-- balise sémantique - liste non ordonnée 
+                qui apportera en même temps des changements visuels (que l'on peut annuler via CSS s'ils ne nous conviennent pas)-->
+
+                <li><!-- balise sémantique - élément de liste -->
+                    <a class="actuel" href="#">Accueil</a>
+                </li>
+
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main><!-- balise sémantique - contenu principal -->
+
+        <section><!-- balise sémantique - section (ici de notre contenu principal) -->
+
+            <div class="centrage"><!-- div (division) : balise NON sémantique très répandue. Pourra être utilisée dès que la structure doit être... divisée pour gérer un aspect visuel (comme ici via la classe "centrage" qui s'accompagne de règles CSS). -->
+
+                <h2>Changement de mise en page !</h2>
+                <!-- Balise h2 : titre de niveau 2. On peut en placer plusieurs sur une page. Ici on part du principe que ce titre concerne la section dans laquelle on se trouve. S'il y avait besoin de subdiviser la section et d'en titrer les différentes parties, on pourrait utiliser des balises h3. -->
+
+                <p>Eh oui, on constate maintenant un semblant de thème visuel, avec notamment une palette de couleurs
+                    élégante, générée par <a href="https://coolors.co" target="_blank"
+                        title="Coolors - un générateur de palettes de couleurs bien pratique">coolors.co</a>, et la
+                    police "Roboto" servie par <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</p>
+
+                <p>Il y a bien sûr eu quelques modifications aussi dans <a href="style.css" target="_blank">ma feuille
+                        CSS</a>, n'hésitez pas à aller y jeter un coup d'oeil. La page présente maintenant plusieurs sections, et les contenus texte sont gérés de manière à posséder une largeur maximale tout en restant centrés lorsque la fenêtre est plus large qu'eux.</p>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="centrage">
+
+                <h2>Autre titre</h2>
+
+                <p>Et ici nous sommes dans une nouvelle <strong>section</strong> de la page.</p>
+
+            </div>
+
+        </section>
+
+        <section class="couleurs-alt">
+
+            <div class="centrage">
+                <h2>Encore un autre titre</h2>
+
+                <p>Cette section de classe "couleurs-alt" possède... des couleurs alternatives. Ce qui n'est pas mal
+                    pour donner un peu de rythme.</p>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="centrage">
+
+                <h2>Un dernier titre</h2>
+
+                <p>Et une section "normale" pour faire bonne mesure.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer><!-- balise sémantique - pied de page -->
+
+            <p>Ceci est un pied de page</p>
+
+    </footer>
+
+</body>
+
+</html>
